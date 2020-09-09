@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFDFDF"
+    android:orientation="vertical"
+    android:screenOrientation="portrait"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Main"
+        app:layout_constraintVertical_bias="1.0">
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#008BC34A"
+            android:text="Возможен вызов ученика несколько раз" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/reset"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FF5722"
+                android:text="reset" />
+
+            <Button
+                android:id="@+id/enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#009688"
+                android:text="вызвать следующего" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55">
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_margin="10dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:gravity="center"
+            android:text="классы"
+            android:textColor="#000000"
+            android:textSize="36sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="131dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/defautClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8-4(весь)"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/firstGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8-4(1 группа)"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/secondGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8-4(2 группа)"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/custom1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="кастомный класс 1"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/custom2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="кастомный класс 2"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/custom3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="кастомный класс 3"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
